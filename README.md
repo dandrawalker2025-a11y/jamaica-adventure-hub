@@ -4,10 +4,10 @@ A small, responsive, multi-page website that helps visitors discover things to d
 
 Built for **Dynamic Websites and Applications** (VTDI, School of Applied Technology) - Assignment 1.
 
-- **Student:** [your name]
-- **Student ID:** [your ID]
+- **Student:** D'Andra Walker
+- **Student ID:** 240-1011-258
 - **Lecturer:** Trevoir Williams
-- **Concept:** Jamaica Adventure Hub (one of the approved concepts)
+- **Concept:** Jamaica Adventure Hub 
 
 ---
 
@@ -128,12 +128,8 @@ All prices, durations and ratings are **sample values for a class project**, not
 
 ## 8. AI use disclosure
 
-> Edit this section so it describes what *you* actually did.
-
 AI tool used: Claude (Anthropic).
-Used for: [e.g. brainstorming the concept, generating a first version of the code, explaining Bootstrap components, debugging].
-What I did myself: [e.g. reviewed and tested every feature, changed the content, colours and wording, and can explain each function in `app.js`].
-
+I used Claude to help build the project.
 ## 9. Credits
 
 - [Bootstrap 5.3](https://getbootstrap.com/) and [jQuery 3.7](https://jquery.com/) loaded from CDNs
