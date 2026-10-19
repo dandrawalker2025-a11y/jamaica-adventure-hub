@@ -4,7 +4,7 @@ A small, responsive, multi-page website that helps visitors discover things to d
 
 Built for **Dynamic Websites and Applications** (VTDI, School of Applied Technology) - Assignment 1.
 
-- **Student:** D'Andra Walker
+- **Student:** DAndraWalker
 - **Student ID:** 240-1011-258
 - **Lecturer:** Trevoir Williams
 - **Concept:** Jamaica Adventure Hub 
