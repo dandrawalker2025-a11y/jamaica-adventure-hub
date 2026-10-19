@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Jamaica Adventure Hub - discover waterfalls, beaches, food and culture across Jamaica and plan your trip.">
+  <title>Jamaica Adventure Hub | Discover the Island</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+</head>
+<body data-page="home" class="d-flex flex-column min-vh-100">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark site-nav sticky-top" aria-label="Main navigation">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Jamaica <span class="brand-accent">Adventure</span> Hub</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+                aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="explore.html">Explore</a></li>
+            <li class="nav-item"><a class="nav-link" href="plan.html">Plan a Trip</a></li>
+            <li class="nav-item ms-lg-3">
+              <span class="navbar-text text-white" title="Experiences saved to your wish list">
+                &hearts; <span id="wishlistCount" class="badge text-bg-warning">0</span>
+                <span class="visually-hidden">saved experiences</span>
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <!-- Hero carousel (Bootstrap JS component #1) -->
+    <section aria-label="Featured destinations">
+      <div id="heroCarousel" class="carousel slide carousel-fade hero-carousel" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="images/dunns-river-falls.jpg" class="d-block w-100" alt="Water cascading over the stepped rocks of Dunn's River Falls" onerror="this.onerror=null;this.src='images/dunns-river-falls.svg'">
+            <div class="carousel-caption">
+              <h1 class="display-4">Find your Jamaican adventure</h1>
+              <p class="lead d-none d-sm-block">Waterfalls, mountains, beaches, jerk smoke and music - all in one small island.</p>
+              <a href="explore.html" class="btn btn-gold btn-lg">Explore experiences</a>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="images/seven-mile-beach.jpg" class="d-block w-100" alt="White sand and turquoise water on Seven Mile Beach, Negril" onerror="this.onerror=null;this.src='images/seven-mile-beach.svg'">
+            <div class="carousel-caption">
+              <h2 class="display-4">Sun, sand and sunsets</h2>
+              <p class="lead d-none d-sm-block">From Negril to the south coast, find the beach that fits your mood.</p>
+              <a href="explore.html" class="btn btn-gold btn-lg">Browse beaches</a>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="images/blue-mountain-peak.jpg" class="d-block w-100" alt="Forested ridges of the Blue Mountains under a hazy blue sky" onerror="this.onerror=null;this.src='images/blue-mountain-peak.svg'">
+            <div class="carousel-caption">
+              <h2 class="display-4">Rise above the clouds</h2>
+              <p class="lead d-none d-sm-block">Hike to the top of the Blue Mountains for an unforgettable sunrise.</p>
+              <a href="plan.html" class="btn btn-gold btn-lg">Plan a trip</a>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous slide</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next slide</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- Why use the hub -->
+    <section class="py-5" aria-labelledby="why-heading">
+      <div class="container">
+        <h2 id="why-heading" class="text-center fw-bold mb-4">Why Jamaica Adventure Hub?</h2>
+        <div class="row g-4 text-center">
+          <div class="col-md-4">
+            <div class="feature-icon mb-3" aria-hidden="true">&#127796;</div>
+            <h3 class="h5">Discover</h3>
+            <p>Browse hand-picked experiences by category, from nature and beaches to food and culture.</p>
+          </div>
+          <div class="col-md-4">
+            <div class="feature-icon mb-3" aria-hidden="true">&#128269;</div>
+            <h3 class="h5">Compare</h3>
+            <p>See difficulty, duration, rating and a sample price before you decide.</p>
+          </div>
+          <div class="col-md-4">
+            <div class="feature-icon mb-3" aria-hidden="true">&#128197;</div>
+            <h3 class="h5">Plan</h3>
+            <p>Send a booking request and get an instant estimate for your group.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured experiences: cards are created by JavaScript from the data array -->
+    <section class="pb-5" aria-labelledby="featured-heading">
+      <div class="container">
+        <div class="d-flex flex-wrap justify-content-between align-items-end mb-4">
+          <h2 id="featured-heading" class="fw-bold mb-0">Featured experiences</h2>
+          <a href="explore.html" class="btn btn-outline-jam">See all experiences</a>
+        </div>
+        <div id="featuredGrid" class="row g-4"></div>
+      </div>
+    </section>
+
+    <!-- Random fact button -->
+    <section class="pb-5" aria-labelledby="fact-heading">
+      <div class="container">
+        <div class="fact-box p-4 rounded shadow-sm d-md-flex align-items-center justify-content-between gap-3">
+          <div>
+            <h2 id="fact-heading" class="h4 fw-bold">Did you know?</h2>
+            <p id="factText" class="mb-3 mb-md-0" aria-live="polite">Press the button to learn something about Jamaica.</p>
+          </div>
+          <button id="factBtn" type="button" class="btn btn-jam flex-shrink-0">Surprise me</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Details modal (Bootstrap JS component #2) - filled by JavaScript -->
+  <div class="modal fade" id="detailsModal" tabindex="-1" aria-labelledby="detailsModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title h4" id="detailsModalLabel">Experience details</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row g-3">
+            <div class="col-md-6"><img id="modalImage" class="img-fluid rounded" src="" alt=""></div>
+            <div class="col-md-6">
+              <p class="mb-1"><span id="modalCategory" class="badge category-badge"></span>
+                 <span id="modalDifficulty" class="badge"></span></p>
+              <p class="text-muted mb-2" id="modalMeta"></p>
+              <p id="modalDescription"></p>
+              <h3 class="h6 fw-bold">Local tips</h3>
+              <ul id="modalTips" class="mb-0"></ul>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <a id="modalPlanLink" href="plan.html" class="btn btn-jam">Plan this experience</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast (Bootstrap JS component #3) -->
+  <div class="toast-container position-fixed bottom-0 start-0 p-3">
+    <div id="appToast" class="toast align-items-center text-bg-dark border-0" role="status" aria-live="polite" aria-atomic="true">
+      <div class="d-flex">
+        <div id="toastMessage" class="toast-body"></div>
+        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+    </div>
+  </div>
+
+  <button id="backToTop" type="button" class="btn btn-gold shadow" aria-label="Back to top">&uarr;</button>
+
+  <footer class="site-footer py-4 mt-auto">
+    <div class="container d-md-flex justify-content-between align-items-center">
+      <p class="mb-2 mb-md-0">&copy; <span id="year"></span> Jamaica Adventure Hub. A student project for Dynamic Websites and Applications.</p>
+      <ul class="list-inline mb-0">
+        <li class="list-inline-item"><a href="index.html">Home</a></li>
+        <li class="list-inline-item"><a href="explore.html">Explore</a></li>
+        <li class="list-inline-item"><a href="plan.html">Plan a trip</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
