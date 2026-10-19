@@ -1,0 +1,220 @@
+/* ==========================================================
+   Jamaica Adventure Hub - custom styles
+   Bootstrap handles layout; this file adds the brand identity.
+   ========================================================== */
+
+:root {
+  --jam-green: #009b3a;
+  --jam-green-dark: #006b28;
+  --jam-gold: #fed100;
+  --jam-black: #111111;
+  --jam-cream: #fffaf0;
+  --bs-body-font-family: "Segoe UI", system-ui, -apple-system, Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+body {
+  background-color: var(--jam-cream);
+  color: #222;
+}
+
+/* Accessibility: visible keyboard focus + skip link */
+:focus-visible {
+  outline: 3px solid var(--jam-gold);
+  outline-offset: 2px;
+}
+
+.skip-link {
+  position: absolute;
+  left: 0.5rem;
+  top: -4rem;
+  z-index: 2000;
+  background: var(--jam-gold);
+  color: var(--jam-black);
+  padding: 0.5rem 1rem;
+  border-radius: 0 0 0.5rem 0.5rem;
+  font-weight: 600;
+  transition: top 0.2s;
+}
+.skip-link:focus {
+  top: 0;
+}
+
+/* ---------- Navbar ---------- */
+.site-nav {
+  background-color: var(--jam-black);
+  border-bottom: 4px solid var(--jam-gold);
+}
+.site-nav .navbar-brand {
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+.site-nav .navbar-brand .brand-accent {
+  color: var(--jam-gold);
+}
+.site-nav .nav-link {
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: 500;
+}
+.site-nav .nav-link:hover,
+.site-nav .nav-link.active {
+  color: var(--jam-gold);
+}
+
+/* ---------- Buttons (brand colours on top of Bootstrap) ---------- */
+.btn-jam {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: var(--jam-green);
+  --bs-btn-border-color: var(--jam-green);
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: var(--jam-green-dark);
+  --bs-btn-hover-border-color: var(--jam-green-dark);
+  --bs-btn-active-bg: var(--jam-green-dark);
+  --bs-btn-active-border-color: var(--jam-green-dark);
+}
+.btn-gold {
+  --bs-btn-color: var(--jam-black);
+  --bs-btn-bg: var(--jam-gold);
+  --bs-btn-border-color: var(--jam-gold);
+  --bs-btn-hover-color: var(--jam-black);
+  --bs-btn-hover-bg: #e6bb00;
+  --bs-btn-hover-border-color: #e6bb00;
+  font-weight: 600;
+}
+.btn-outline-jam {
+  --bs-btn-color: var(--jam-green-dark);
+  --bs-btn-border-color: var(--jam-green);
+  --bs-btn-hover-bg: var(--jam-green);
+  --bs-btn-hover-border-color: var(--jam-green);
+  --bs-btn-hover-color: #fff;
+  --bs-btn-active-bg: var(--jam-green-dark);
+  --bs-btn-active-color: #fff;
+}
+
+/* Category filter buttons: the active one is filled green */
+.filter-btn.active {
+  background-color: var(--jam-green);
+  border-color: var(--jam-green);
+  color: #fff;
+}
+
+/* ---------- Hero carousel ---------- */
+.hero-carousel .carousel-item img {
+  height: 70vh;
+  min-height: 380px;
+  max-height: 560px;
+  object-fit: cover;
+  filter: brightness(0.82);
+  object-position: center 60%;
+}
+.hero-carousel .carousel-caption {
+  bottom: 18%;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+}
+.hero-carousel .carousel-caption h1,
+.hero-carousel .carousel-caption h2 {
+  font-weight: 800;
+}
+
+/* ---------- Page headers on inner pages ---------- */
+.page-banner {
+  background: linear-gradient(135deg, var(--jam-green-dark), var(--jam-green) 55%, #0a3d1c);
+  color: #fff;
+  border-bottom: 6px solid var(--jam-gold);
+}
+
+/* ---------- Cards ---------- */
+.attraction-card {
+  border: 0;
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.attraction-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.18) !important;
+}
+.attraction-card .card-img-top {
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+.category-badge {
+  background-color: var(--jam-black);
+  color: var(--jam-gold);
+}
+
+.feature-icon {
+  width: 3.5rem;
+  height: 3.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--jam-gold);
+  font-size: 1.6rem;
+}
+
+.fact-box {
+  border-left: 6px solid var(--jam-gold);
+  background: #fff;
+}
+
+/* Wish-list heart button */
+.wish-btn.saved {
+  background-color: #dc3545;
+  border-color: #dc3545;
+  color: #fff;
+}
+
+/* ---------- Price estimate panel ---------- */
+.estimate-panel {
+  border: 2px dashed var(--jam-green);
+  border-radius: 1rem;
+  background: #fff;
+}
+.estimate-total {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--jam-green-dark);
+}
+
+/* ---------- Accordion ---------- */
+.accordion-button:not(.collapsed) {
+  background-color: #e8f7ee;
+  color: var(--jam-green-dark);
+}
+
+/* ---------- Back to top (jQuery shows/hides it) ---------- */
+#backToTop {
+  position: fixed;
+  right: 1.25rem;
+  bottom: 1.25rem;
+  z-index: 1030;
+  display: none; /* jQuery fades it in after scrolling */
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  font-size: 1.25rem;
+  line-height: 1;
+  padding: 0;
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+  background: var(--jam-black);
+  color: rgba(255, 255, 255, 0.8);
+  border-top: 4px solid var(--jam-green);
+}
+.site-footer a {
+  color: var(--jam-gold);
+}
+
+/* Respect users who prefer less motion */
+@media (prefers-reduced-motion: reduce) {
+  .attraction-card,
+  .skip-link {
+    transition: none;
+  }
+  .attraction-card:hover {
+    transform: none;
+  }
+}
